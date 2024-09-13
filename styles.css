@@ -3,6 +3,18 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f0f0f0;
+  text-align: center;
+}
+
+header {
+  padding: 20px;
+  background-color: #333;
+  color: white;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.5em;
 }
 
 .gallery {
@@ -11,6 +23,8 @@ body {
   grid-auto-rows: 200px;
   gap: 10px;
   padding: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .gallery-item {
@@ -19,11 +33,57 @@ body {
   object-fit: cover;
   border-radius: 8px;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  opacity: 0;
+  transform: scale(0.95);
+  animation: fadeIn 0.6s forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añadimos transición suave */
 }
 
 .gallery-item:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /* Efecto de zoom */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+#loader {
+  display: none;
+  margin: 20px auto;
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #333;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.load-more {
+  margin: 20px 0;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #555;
 }
 
 .modal {

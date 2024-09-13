@@ -1,23 +1,40 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galería Estilo Masonry</title>
+  <title>Gallery</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="gallery">
-    <img src="img/surf school 1.jpeg" alt="Imagen 1" class="gallery-item">
-    <img src="img/surf school 2.jpeg" alt="Imagen 2" class="gallery-item">
-    <img src="img/surf school 3.jpeg" alt="Imagen 3" class="gallery-item">
-    <img src="img/surf school 4.jpeg" alt="Imagen 4" class="gallery-item">
-    <img src="img/surf school 5.jpeg" alt="Imagen 5" class="gallery-item">
-    <img src="img/surf school 6.jpeg" alt="Imagen 6" class="gallery-item">
-    <img src="img/surf school 7.jpeg" alt="Imagen 7" class="gallery-item">
-    <img src="img/surf school 8.jpeg" alt="Imagen 8" class="gallery-item">
+  <header>
+    <h1>Gallery</h1>
+  </header>
+
+  <div class="gallery" id="gallery">
+    <img src="img/surf school 1.jpeg" alt="Image 1" class="gallery-item" loading="lazy">
+    <img src="img/surf school 2.jpeg" alt="Image 2" class="gallery-item" loading="lazy">
+    <img src="img/surf school 3.jpeg" alt="Image 2" class="gallery-item" loading="lazy">
+    <img src="img/surf school 5.jpeg" alt="Image 2" class="gallery-item" loading="lazy">
+    <img src="img/surf school 6.jpeg" alt="Image 2" class="gallery-item" loading="lazy">
+    <img src="img/surf school 7.jpeg" alt="Image 2" class="gallery-item" loading="lazy">
+    <img src="img/surf school 8.jpeg" alt="Image 2" class="gallery-item" loading="lazy">
+    <img src="img/surf school 9.jpeg" alt="Image 2" class="gallery-item" loading="lazy">
+    <img src="img/surf school 10.jpeg" alt="Image 2" class="gallery-item" loading="lazy">
+    <img src="img/surf school 11.jpeg" alt="Image 2" class="gallery-item" loading="lazy">
+    <img src="img/surf school 12.jpeg" alt="Image 2" class="gallery-item" loading="lazy">
+    <img src="img/surf school 13.jpeg" alt="Image 2" class="gallery-item" loading="lazy">
   </div>
 
+  <!-- Loader e indicador de carga -->
+  <div id="loader"></div>
+
+  <!-- Botón para cargar más imágenes -->
+  <div class="load-more">
+    <button id="load-more-btn">Load More</button>
+  </div>
+
+  <!-- Modal para imágenes -->
   <div id="modal" class="modal">
     <span class="close">&times;</span>
     <img class="modal-content" id="modal-image">
